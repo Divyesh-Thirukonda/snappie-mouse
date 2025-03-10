@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Snappie Mouse",
+    "version": "1.0",
+    "description": "Snap the mouse to the nearest clickable element when holding Ctrl and moving the mouse.",
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
